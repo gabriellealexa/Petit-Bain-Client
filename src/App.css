@@ -13,6 +13,13 @@
   }
 }
 
+.btn.btn-pb {
+  color: #e7e7e7;
+  background: #555555;
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 .App-header {
   min-height: 100vh;
   display: flex;
@@ -37,3 +44,58 @@
     transform: translateY(0px)
   }
 }
+
+.form-wrap{
+  margin: auto;
+  width: 45%;
+  padding: 10px;
+  text-align: left;
+}
+
+.about-page{
+  width: 65%;
+  display: inline-block;
+  justify-content: center;
+}
+
+.about-blurb{
+  text-align: left;
+}
+
+.scope-cards {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 25%);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  }
+
+  .scope-card {
+    border: 2px solid #e7e7e7; 
+    border-radius: 4px; 
+    padding: .5rem;
+    margin: 0 0 2% 0;
+    }
+
+    .starred-resources {
+      display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 25%);
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    }
+
+  .organizer-cards {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fill, 25%);
+      grid-auto-rows: auto;
+      grid-gap: 1rem;
+    }
+
+  .organizer-card {
+      border: 2px solid #e7e7e7; 
+      border-radius: 4px; 
+      padding: .5rem;
+      margin: 0 0 2% 0;
+      }
