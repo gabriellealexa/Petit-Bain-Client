@@ -52,32 +52,36 @@ function SignUpForm(props) {
 
   return(
     <div style={formDivStyle}>
-        <h1>Sign Up</h1>
+      <div className="info-group">
+        <h2>Sign Up</h2>
+        <center>Already have an account? <a href="/login">Login here</a>.</center>
         <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicUsername">
-            <Form.Label>Username:</Form.Label>
-            <Form.Control value={username} onChange={handleUsernameChange} type="username" placeholder="Enter username" />
+           <Form.Label><b>Username:</b></Form.Label>
+           <Form.Control value={username} onChange={handleUsernameChange} type="username" placeholder="Must be a combination of letters and/or numbers. Cannot match any existing users on the site." />
             <Form.Text className="text-muted">
             </Form.Text>
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password:</Form.Label>
-            <Form.Control value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
+            <Form.Label><b>Password:</b></Form.Label>
+            <Form.Control value={password} onChange={handlePasswordChange} type="password" placeholder="Case sensitive." />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
         </Form.Group>
 
         <Form.Group controlId="formBasicAvatar">
-            <Form.Label>Avatar:</Form.Label>
-            <Form.Control value={avatar} onChange={handleAvatarChange} type="avatar" placeholder="Avatar" />
+            <Form.Label><b>Avatar:</b></Form.Label>
+            <Form.Control value={avatar} onChange={handleAvatarChange} type="avatar" placeholder="Full URL of an image hosted on another site." />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <center>
+          <Button variant="primary" type="submit">
           Submit
           </Button>
-
+          </center>
         </Form>
+        </div>
     </div>
   )
 

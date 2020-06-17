@@ -47,22 +47,26 @@ function LogInForm(props) {
 
   return(
     <div style={formDivStyle}>
-        <h1>Log In</h1>
+
+      <div className="info-group">     
+        <h2>Log In</h2>
+         <center> Need to make an account? <a href="/signup">Register here</a>.</center>
+       <br />
         <Form onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicEmail">
-            <Form.Label>Username:</Form.Label>
+            <Form.Label><b>Username:</b></Form.Label>
             <Form.Control value={username} onChange={handleUsernameChange} type="username" placeholder="Enter username" />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password:</Form.Label>
+            <Form.Label><b>Password:</b></Form.Label>
             <Form.Control value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
         </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember Me" />
-        </Form.Group>
+        <center>
         <Button type="submit">Login</Button>
+        </center>
         </Form>
+    </div>
     </div>
   )
 

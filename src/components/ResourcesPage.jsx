@@ -1,6 +1,6 @@
 import React from 'react';
 import Scope from './Scope';
-import AboutPage from './AboutPage';
+import AboutResources from './AboutResources';
 
 
 class ResourcesPage extends React.Component {
@@ -25,9 +25,8 @@ class ResourcesPage extends React.Component {
 
     render(){
         return (
-            <div className="resource-page">
+            <div className="info-group">
                 <h1>Mutual Aid Resources</h1>
-                <AboutPage />
         <p>{ this.state.resources.map(scopeObj => {
            return <Scope scopeObj={scopeObj} />
         })}</p>

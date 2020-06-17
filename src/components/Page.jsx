@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import SignUpForm from './SignUpForm';
 import LogInForm from './LogInForm';
 import EditUserInfo from './EditUserInfo';
+import WhatIs from './WhatIs';
 
 
 class Page extends React.Component {
@@ -30,6 +31,7 @@ class Page extends React.Component {
                 <Route exact path="/personal-info">
                     <EditUserInfo user={this.props.user} handleLogin={this.props.handleLogin} />
                     </Route>
+                    <Route exact path="/what-is-mutual-aid" component={WhatIs} />
                 </Router>
             </div>
         )

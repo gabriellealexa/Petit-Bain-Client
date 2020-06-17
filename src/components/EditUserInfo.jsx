@@ -6,7 +6,6 @@ function EditUserInfo(props) {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [bio, setBio] = useState("")
     const [avatar, setAvatar] = useState("")
 
     const handleUsernameChange = (evt) => {
@@ -42,8 +41,8 @@ function EditUserInfo(props) {
       props.handleLogin(data.user)
       console.log(data.user)
     })
-    // setUsername("")
-    // setPassword("")
+        setUsername()
+        setPassword("")
   }
 
   const formDivStyle = {

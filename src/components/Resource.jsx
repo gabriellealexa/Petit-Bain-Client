@@ -37,15 +37,17 @@ class Resource extends React.Component {
                 return need.title
             })}</Card.Subtitle>
                     <Card.Text>
+                      <small>
                     { this.props.resource.details }
-                    <br />
+                    </small>
+                    <br /><br />
             <p> <b>Organized by:</b> {this.props.resource.organizers.map(organizer => {
-                return  organizer.title
+                return  <p><center> { organizer.title } </center></p>
                 }) } </p>
                      </Card.Text>
                      </Card.Body>
                      <Card.Footer>
-                         <Button onClick={() => this.handleAddResource(this.props.resource)} variant="primary">Add to Starred Resources</Button>
+                        <center><Button onClick={() => this.handleAddResource(this.props.resource)} variant="primary">Add to Starred Resources</Button></center> 
                    </Card.Footer>
                     </Card>
             </div>

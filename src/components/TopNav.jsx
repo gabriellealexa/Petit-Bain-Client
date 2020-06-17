@@ -13,6 +13,7 @@ class TopNav extends React.Component {
 <Navbar.Collapse id="basic-navbar-nav">
 <Nav className="mr-auto">
 <Nav.Link href="/">Home</Nav.Link>
+<Nav.Link href="/what-is-mutual-aid">What is Mutual Aid?</Nav.Link>
 <Nav.Link href="/resources">Mutual Aid Resources</Nav.Link>
 <Nav.Link href="/organizers">Groups + Organizers</Nav.Link>
 </Nav>
@@ -31,6 +32,7 @@ class TopNav extends React.Component {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/what-is-mutual-aid">What is Mutual Aid?</Nav.Link>
       <Nav.Link href="/resources">Mutual Aid Resources</Nav.Link>
       <Nav.Link href="/organizers">Groups + Organizers</Nav.Link>
     </Nav>
