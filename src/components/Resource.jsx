@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Toast from 'react-bootstrap/Toast';
 
 class Resource extends React.Component {
 
@@ -21,7 +21,6 @@ class Resource extends React.Component {
         }).then(resp => resp.json())
         .then(newSR => {
             console.log(newSR)
-          console.log("Success! Added to Hub.")
         })
        }
 

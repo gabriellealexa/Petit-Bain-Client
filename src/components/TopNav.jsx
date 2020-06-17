@@ -4,10 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 
 class TopNav extends React.Component {
 
-    handleLogout = () => {
-    localStorage.removeItem('token');
-    }
-
     render() {
       if (localStorage.token) {
         return <div className="TopNav">
@@ -27,9 +23,6 @@ class TopNav extends React.Component {
 </Navbar>
      </div>
       }
-
-
-
         return (
             <div className="TopNav">
                <Navbar bg="light" expand="lg">

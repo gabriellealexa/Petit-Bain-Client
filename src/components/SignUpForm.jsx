@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 function SignUpForm(props) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [bio, setBio] = useState("")
     const [avatar, setAvatar] = useState("")
 
     const handleUsernameChange = (evt) => {
@@ -14,10 +13,6 @@ function SignUpForm(props) {
 
     const handlePasswordChange = (evt) => {
         setPassword(evt.target.value)
-    }
-
-    const handleBioChange = (evt) => {
-      setBio(evt.target.value)
     }
 
   const handleAvatarChange = (evt) => {
@@ -36,7 +31,6 @@ function SignUpForm(props) {
       body: JSON.stringify({
         username,
         password,
-        bio,
         avatar
       })
     })
@@ -72,11 +66,6 @@ function SignUpForm(props) {
             <Form.Control value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
-        </Form.Group>
-
-        <Form.Group controlId="formBasicBio">
-            <Form.Label>Bio:</Form.Label>
-            <Form.Control value={bio} onChange={handleBioChange} type="bio" placeholder="Bio" />
         </Form.Group>
 
         <Form.Group controlId="formBasicAvatar">

@@ -25,10 +25,10 @@ class Page extends React.Component {
                     <SignUpForm handleLogin={this.props.handleLogin} />
                     </Route>
                     <Route exact path="/hub">
-                        <Hub user={this.props.user} />
+                        <Hub handleLogin={this.props.handleLogin} user={this.props.user} />
                     </Route>
                 <Route exact path="/personal-info">
-                    <EditUserInfo user={this.props.user} />
+                    <EditUserInfo user={this.props.user} handleLogin={this.props.handleLogin} />
                     </Route>
                 </Router>
             </div>

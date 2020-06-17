@@ -27,18 +27,24 @@ class StarredResource extends React.Component {
     }
 
     handleRemoveItem = (id) => {
-        this.state.starredResources.map(sr => {
+        let removeOnDom = document.getElementById(`${id}`);
+        let starredResources = this.state.starredResources;
+        starredResources.map(sr => {
             if (sr.resource_id === id) {
                 fetch(`http://localhost:3000/starred_resources/${sr.id}`, {
                     method: 'DELETE'
                 })
             }
-        })           
+        })
+        removeOnDom.remove();         
     }
 
     render() {
+
+       
+
         return (
-            <div className="starred-resource">
+            <div id={this.props.resource.id} className="starred-resource">
                   <Card style={{ width: '100%', height: '100%' }}>
                      <Card.Img variant="top" src={this.props.resource.img} />
                     <Card.Body>

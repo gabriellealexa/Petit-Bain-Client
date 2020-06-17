@@ -18,7 +18,7 @@ class StarredOrganizers extends React.Component {
                 <h1>Starred Organizers:</h1>
                 <div className="starred-resources">
                 { organizers.map(organizer => {
-                    return <StarredOrganizer user={this.props.user} organizer={organizer} /> })
+                    return <StarredOrganizer key={organizer.id} user={this.props.user} organizer={organizer} /> })
                 }  </div><br />
                 <p><a href="http://localhost:3001/organizers">All Organizers</a></p>
             </div>

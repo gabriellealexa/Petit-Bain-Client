@@ -17,7 +17,7 @@ class StarredResources extends React.Component {
                 <h1>Starred Resources:</h1>
                 <div className="starred-resources">
             { resources.map(r => {
-                return <StarredResource user={this.props.user} resource={r} />
+                return <StarredResource key={r.id} user={this.props.user} resource={r} />
             }) } </div>
             <br />
                 <p><a href="http://localhost:3001/resources">All Resources</a></p>

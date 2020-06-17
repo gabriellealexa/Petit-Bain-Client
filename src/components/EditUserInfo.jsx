@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import UserInfo from './UserInfo';
 
 function EditUserInfo(props) {
 
@@ -18,10 +17,6 @@ function EditUserInfo(props) {
         setPassword(evt.target.value)
     }
 
-    const handleBioChange = (evt) => {
-      setBio(evt.target.value)
-    }
-
   const handleAvatarChange = (evt) => {
     setAvatar(evt.target.value)
     }
@@ -29,8 +24,8 @@ function EditUserInfo(props) {
 
     const handleSubmit = (evt) => {
     evt.preventDefault()
-    fetch('http://localhost:3000/users', {
-      method: "POST",
+    fetch(`http://localhost:3000/users/${props.user.id}`, {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json"
@@ -38,7 +33,6 @@ function EditUserInfo(props) {
       body: JSON.stringify({
         username,
         password,
-        bio,
         avatar
       })
     })
@@ -48,8 +42,8 @@ function EditUserInfo(props) {
       props.handleLogin(data.user)
       console.log(data.user)
     })
-    setUsername("")
-    setPassword("")
+    // setUsername("")
+    // setPassword("")
   }
 
   const formDivStyle = {
@@ -75,11 +69,6 @@ function EditUserInfo(props) {
             <Form.Control value={password} onChange={handlePasswordChange} type="password" placeholder="Password" />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox">
-        </Form.Group>
-
-        <Form.Group controlId="formBasicBio">
-            <Form.Label>Bio:</Form.Label>
-            <Form.Control value={bio} onChange={handleBioChange} type="bio" placeholder="Bio" />
         </Form.Group>
 
         <Form.Group controlId="formBasicAvatar">

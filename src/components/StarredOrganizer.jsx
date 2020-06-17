@@ -27,18 +27,20 @@ class StarredOrganizer extends React.Component {
     }
 
     handleRemoveItem = (id) => {
+        let removeOnDom = document.getElementById(`${id}`);
         this.state.starredOrganizers.map(so => {
             if (so.organizer_id === id) {
                 fetch(`http://localhost:3000/starred_organizers/${so.id}`, {
                     method: 'DELETE'
                 })
             }
-        })           
+        }) 
+        removeOnDom.remove();             
     }
 
     render() {
         return (
-            <div className="starred-resource">
+            <div id={this.props.organizer.id} className="starred-resource">
                   <Card style={{ width: '100%', height: '100%' }}>
                      <Card.Img variant="top" src={this.props.organizer.img} />
                     <Card.Body>

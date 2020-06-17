@@ -1,8 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import TopNav from './components/TopNav'
 import Page from './components/Page';
-import {withRouter, Route } from 'react-router-dom';
-import Hub from './components/Hub'
 import './App.css';
 
 function App(props) {
@@ -29,16 +27,16 @@ function App(props) {
   }
 
 
-  const handleAuthClick = () => {
-    const token = localStorage.getItem("token")
-    fetch(`http://localhost:3000/user_is_authed`, {
-      headers: {
-        "Authorization": `Bearer ${token}`
-      }
-    })
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-  }
+  // const handleAuthClick = () => {
+  //   const token = localStorage.getItem("token")
+  //   fetch(`http://localhost:3000/user_is_authed`, {
+  //     headers: {
+  //       "Authorization": `Bearer ${token}`
+  //     }
+  //   })
+  //   .then(resp => resp.json())
+  //   .then(data => console.log(data))
+  // }
 
   console.log(user)
 

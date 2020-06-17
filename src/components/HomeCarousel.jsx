@@ -1,5 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Jumbotron from 'react-bootstrap/Jumbotron';
+import Button from 'react-bootstrap/Button';
 
 
 class HomeCarousel extends React.Component {
@@ -12,12 +14,19 @@ class HomeCarousel extends React.Component {
     <img
       className="d-block w-100"
       src="http://code.gabriellealexa.com/mutual_aid_1.png"
-      alt="First slide"
+      alt="Mutual Aid Resources"
     />
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
+    <Jumbotron>
+  <h1>What is Mutual Aid?</h1>
+  <p>
+  Mutual aid projects are a form of political participation in which people take responsibility for caring for one another and changing political conditions.
+  </p>
+  <p>
+    <Button variant="primary">Learn more</Button>
+  </p>
+</Jumbotron>
+</Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
     <img
@@ -27,8 +36,8 @@ class HomeCarousel extends React.Component {
     />
 
     <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h3>More On Mutual Aid</h3>
+      <p>Mutual aid participants work together to figure out strategies and resources to meet each others' needs, such as food, housing, medical care, and disaster relief, while organizing themselves against the system that created the shortage in the first place.</p>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -39,8 +48,8 @@ class HomeCarousel extends React.Component {
     />
 
     <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      <h3>More On Mutual Aid:</h3>
+      <p>Mutual aid is distinct from charity. Mutual aid projects are often critical of the charity model, and may use the motto "solidarity, not charity" to differentiate themselves from charities..</p>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
