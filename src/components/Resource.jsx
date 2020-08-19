@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Toast from 'react-bootstrap/Toast';
 
 class Resource extends React.Component {
 

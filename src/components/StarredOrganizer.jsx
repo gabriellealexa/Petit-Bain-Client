@@ -35,7 +35,7 @@ class StarredOrganizer extends React.Component {
                 })
             }
         }) 
-        removeOnDom.remove();             
+        removeOnDom.remove();     
     }
 
     render() {

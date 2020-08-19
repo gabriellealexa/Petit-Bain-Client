@@ -1,6 +1,5 @@
 import React from 'react';
 import Scope from './Scope';
-import AboutResources from './AboutResources';
 
 
 class ResourcesPage extends React.Component {
